@@ -1,15 +1,55 @@
 class ApplicationController < Sinatra::Base
   set default_content_type: 'application/json'
   
-  # Add your routes here
   get '/questions' do
     questions = Question.all
     questions.to_json
   end
-
+  
   get '/questions/:id' do
     question = Question.find(params[:id])
     question.to_json
   end
+
+  post '/users' do
+    user = User.create(
+      name: params[:name],
+      score: params[:score]
+    )
+    user.to_json
+  end
+
+  get '/users' do
+    user = User.all
+    user.to_json
+  end
+
+  patch '/users/:id' do
+    user = User.find(params[:id])
+    user.update(
+      score: params[:score]
+    )
+    user.to_json
+  end
+
+  get '/results' do
+    # result = Result.all
+    # result.to_json
+    "hello world"
+  end
+
+  # post '/results' do
+  #   user = User.create(
+  #     name: params[:name]
+  #     score: params[:score]
+  #   )
+  #   user.to_json
+  # end
+
+  # delete '/results/:id' do
+  #   result = Result.find(params[:id])
+  #   result.destroy
+  #   result.to_json
+  # end
 
 end
