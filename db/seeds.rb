@@ -1,5 +1,25 @@
 puts "🌱 Seeding spices..."
 
-# Seed your database here
+q1 = Question.create(question: "What is Zach's favorite food?", correct_answer: "Buffalo Chicken", incorrect_answer_1: "Pizza", incorrect_answer_2: "Burgers", incorrect_answer_3: "Lasagna", category: "Food")
+q2 = Question.create(question: "Where does Emily live?", correct_answer: "Monroe, CT", incorrect_answer_1: "Stamford, CT", incorrect_answer_2: "Little Rock, AR", incorrect_answer_3: "Birmingham, AL", category: "Geography")
+q3 = Question.create(question: "What is the name of Daniel's dog?", correct_answer: "Finn", incorrect_answer_1: "Buddy", incorrect_answer_2: "Max", incorrect_answer_3: "Rocky", category: "Pets")
+q4 = Question.create(question: "What is Briana's favorie place she's been to?", correct_answer: "France", incorrect_answer_1: "Germany", incorrect_answer_2: "Japan", incorrect_answer_3: "Florida", category: "Geography")
+q5 = Question.create(question: "Where does Jim live?", correct_answer: "Southhampton, PA", incorrect_answer_1: "Atlanta, GA", incorrect_answer_2: "Nashville, TN", incorrect_answer_3: "NYC, NY", category: "Geography")
+q6 = Question.create(question: "Does Emily have any pets?", correct_answer: "No", incorrect_answer_1: "Ofcourse she does", incorrect_answer_2: "I have no clue", incorrect_answer_3: "🧐 uhh", category: "Pets")
+q7 = Question.create(question: "What sport would Lucy compete in if she was in the Olympics?", correct_answer: "Gymnastics", incorrect_answer_1: "Soccer", incorrect_answer_2: "Basketball", incorrect_answer_3: "Building IKEA furniture", category: "Sports")
+q8 = Question.create(question: "What instrument did Paul play?", correct_answer: "Clarinet", incorrect_answer_1: "Drums", incorrect_answer_2: "Guitar", incorrect_answer_3: "Trombone", category: "Instruments")
+q9 = Question.create(question: "What is Daniel's life motto?", correct_answer: "Life is too short to do anything other than what makes you happy.", incorrect_answer_1: "Who has a life motto?", incorrect_answer_2: "Persistency is key", incorrect_answer_3: "Everyone is fighting their own battles", category: "Life")
+q10 = Question.create(question: "Where does Briana live?", correct_answer: "Austin, TX", incorrect_answer_1: "Dallas, TX", incorrect_answer_2: "Houston, TX", incorrect_answer_3: "San Antonio, TX", category: "Geography")
+q11 = Question.create(question: "What is Peter's piece of advice?", correct_answer: "F it, we ball ", incorrect_answer_1: "When you quit, you fail.", incorrect_answer_2: "All reality is iconoclastic", incorrect_answer_3: "You are the average of the five people you spend the most time with.", category: "Life")
+q12 = Question.create(question: "What is Tristen's favorite food?", correct_answer: "Smoked Brisket", incorrect_answer_1: "Mac and Cheese", incorrect_answer_2: "Rice", incorrect_answer_3: "Sushi", category: "Food")
+q13 = Question.create(question: "How many pets does Zach have?", correct_answer: "2", incorrect_answer_1: "1", incorrect_answer_2: "Doesn't have any", incorrect_answer_3: "I thought he had a cat", category: "Pets")
+q14 = Question.create(question: "What is Gian's favorite sports team?", correct_answer: "Austin FC", incorrect_answer_1: "NY Giants", incorrect_answer_2: "Red Sox", incorrect_answer_3: "Green Bay Packers", category: "Sports")
+q15 = Question.create(question: "What is Peter's favorite food?", correct_answer: "Buffalo Wings", incorrect_answer_1: "Pizza", incorrect_answer_2: "Burgers", incorrect_answer_3: "Pasta Bolognese", category: "Food")
+q16 = Question.create(question: "Where does Lucy live?", correct_answer: "Sweet Home Alabama", incorrect_answer_1: "Louisiana", incorrect_answer_2: "Wisconsin", incorrect_answer_3: "Middle of nowhere basically", category: "Geography")
+q17 = Question.create(question: "What is Paul's favorie place he's been to?", correct_answer: "Hawaii", incorrect_answer_1: "Korea", incorrect_answer_2: "Iceland", incorrect_answer_3: "Spain", category: "Food")
+q18 = Question.create(question: "What is Shree's favorie place he's been to?", correct_answer: "England", incorrect_answer_1: "Mexico", incorrect_answer_2: "Italy", incorrect_answer_3: "Indiana", category: "Geography")
+q19 = Question.create(question: "Does Nico have any pets?", correct_answer: "Yes, 1 cat", incorrect_answer_1: "Yes, 1 dog", incorrect_answer_2: "No pets", incorrect_answer_3: "Yes, 2 cats named Cookies and Cream", category: "Pets")
+q20 = Question.create(question: "What is Chloe's favorie place she's been to?", correct_answer: "Kenya", incorrect_answer_1: "Jamaica", incorrect_answer_2: "Bahamas", incorrect_answer_3: "Germany", category: "Geography")
+q21 = Question.create(question: "What is Sam's favorite hobby?", correct_answer: "Drawing", incorrect_answer_1: "Shopping", incorrect_answer_2: "Gaming", incorrect_answer_3: "Snowboarding", category: "Hobbies")
 
 puts "✅ Done seeding!"
