@@ -38,6 +38,26 @@ class ApplicationController < Sinatra::Base
     "hello world"
   end
 
+    #Nico made changes below 
+
+    get '/users/:id' do
+      user = User.find(params[:id])
+      user.to_json
+    end
+  
+    get '/results' do
+      results = Result.all
+      results.to_json
+    end
+  
+    post '/results' do
+      result = Result.create(
+        name: params[:name],
+        score: params[:score]
+      )
+      result.to_json
+    end
+
   # post '/results' do
   #   user = User.create(
   #     name: params[:name]
