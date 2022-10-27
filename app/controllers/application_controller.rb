@@ -5,7 +5,7 @@ class ApplicationController < Sinatra::Base
     questions = Question.all
     questions.to_json
   end
-  
+
   get '/questions/:id' do
     question = Question.find(params[:id])
     question.to_json
@@ -24,6 +24,11 @@ class ApplicationController < Sinatra::Base
     user.to_json
   end
 
+  get '/users/:id' do
+    user = User.find(params[:id])
+    user.to_json
+  end
+
   patch '/users/:id' do
     user = User.find(params[:id])
     user.update(
@@ -33,43 +38,21 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/results' do
-    # result = Result.all
-    # result.to_json
-    "hello world"
+    result = Result.all.order(:score).reverse
+    result.to_json
   end
 
-    #Nico made changes below 
+  post '/results' do
+    result = Result.create(
+      name: params[:name],
+      score: params[:score]
+    )
+    result.to_json
+  end
 
-    get '/users/:id' do
-      user = User.find(params[:id])
-      user.to_json
-    end
-  
-    get '/results' do
-      results = Result.all
-      results.to_json
-    end
-  
-    post '/results' do
-      result = Result.create(
-        name: params[:name],
-        score: params[:score]
-      )
-      result.to_json
-    end
-
-  # post '/results' do
-  #   user = User.create(
-  #     name: params[:name]
-  #     score: params[:score]
-  #   )
-  #   user.to_json
-  # end
-
-  # delete '/results/:id' do
-  #   result = Result.find(params[:id])
-  #   result.destroy
-  #   result.to_json
-  # end
+  delete '/results' do
+    results = Result.all
+    results.destroy_all
+  end
 
 end
